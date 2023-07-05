@@ -1,0 +1,15 @@
+/* Main file for global styles (I am not expecting to have a lot of styles here) */
+
+@font-face {
+  font-family: Cantarell;
+  src: url(/Cantarell-VF.otf);
+}
+
+* {
+  font-family: Cantarell;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

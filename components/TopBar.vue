@@ -3,11 +3,25 @@
     <img class="top-bar__background" :src="backgroundImg" />
     <div class="top-bar__container">
       <img class="top-bar__profile" src="profile.jpg" />
+      <div class="top-bar__links">
+        <h3>{{ name }}</h3>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+.top-bar__links {
+  position: absolute;
+  top: 260px;
+  right: 320px;
+}
+
+.top-bar__links h3 {
+  color: white;
+  margin: 0;
+}
+
 .top-bar__container {
   position: relative;
   max-width: 1200px;
@@ -37,6 +51,7 @@ export default {
   name: 'TopBar',
   props: {
     backgroundImg: String,
+    name: String,
   },
 }
 </script>

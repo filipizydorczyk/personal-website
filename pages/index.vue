@@ -1,13 +1,6 @@
 <template>
-  <TopBar backgroundImg="code.jpg" />
+  <TopBar backgroundImg="code.jpg" name="Filip Izydorczyk" />
 </template>
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-</style>
 
 <script lang="ts">
 import Vue from 'vue'
