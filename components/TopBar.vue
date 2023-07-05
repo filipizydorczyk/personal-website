@@ -2,7 +2,7 @@
   <nav class="top-bar">
     <img class="top-bar__background" :src="backgroundImg" />
     <div class="top-bar__container">
-      <img class="top-bar__profile" src="profile.jpg" />
+      <img class="top-bar__profile" :src="profileImg" />
       <div class="top-bar__links">
         <h3>{{ name }}</h3>
       </div>
@@ -51,6 +51,7 @@ export default {
   name: 'TopBar',
   props: {
     backgroundImg: String,
+    profileImg: String,
     name: String,
   },
 }
