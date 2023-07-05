@@ -85,7 +85,7 @@
             rendering.
           </p>
         </SectionWithIcon>
-        <SectionWithIcon icon="icon/hobbajt.png" header="Emakina / EPAM">
+        <SectionWithIcon icon="icon/hobbajt.png" header="Hobbajt">
           <p>
             In hobbajt I actually started as a IT teacher for kids but I quickly
             started to help with their clients websites. It was mainly

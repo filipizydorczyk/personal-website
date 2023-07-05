@@ -2,7 +2,6 @@ This is project for my website. Vue.js is used so that I can create reusuable co
 
 **Commands:**
 
-- `npm run dev` - watch for files change and resnders them to `dist` directory
 - `npm run start` - starts http server with current `dist`
 - `npm run generate` - builds static files to `dist` directory
 
