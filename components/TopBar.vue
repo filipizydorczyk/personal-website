@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar">
+  <nav class="top-bar">
     <img class="top-bar__background" :src="backgroundImg" />
     <div class="top-bar__container">
       <img class="top-bar__profile" src="profile.jpg" />
@@ -7,7 +7,7 @@
         <h3>{{ name }}</h3>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <style>
