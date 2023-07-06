@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "http-server ./dist",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --target static",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
