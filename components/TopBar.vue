@@ -41,8 +41,21 @@
   top: 100px;
   right: 0;
   width: 300px;
-  height: auto;
+  height: 300px;
   border-radius: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 750px) {
+  .top-bar__profile {
+    width: 200px;
+    height: 200px;
+    top: 150px;
+  }
+
+  .top-bar__links {
+    right: 220px;
+  }
 }
 </style>
 

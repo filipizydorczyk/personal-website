@@ -15,7 +15,9 @@
   margin-right: 1rem;
 }
 
-.icon-section h2,
+.icon-section h2 {
+  margin: 0.5rem 0;
+}
 .icon-section p {
   margin: 0;
 }
@@ -27,7 +29,7 @@
 .icon-section {
   display: flex;
   align-items: center;
-  margin: 3rem 1rem;
+  margin: 2rem 1rem;
 }
 </style>
 

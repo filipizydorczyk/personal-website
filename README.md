@@ -10,3 +10,7 @@ This is project for my website. Vue.js is used so that I can create reusuable co
 - `/components` - is direcotry for reusable copmonents. It should conain no content only parst of html with parameters to provide
 - `/pages` - each file in this direcotry should be seperate page. This files are supposed to have content of the page whcih will be provided to components used on that page.
 - `/static` - all of the files I know website will need to show content like fonts, icons, images, static css
+
+# Resources
+
+Some logos comes from svgrepo (these have a comment in component file) and other were searched on [seek logo](https://seeklogo.com/), [wikimedia](https://commons.wikimedia.org), [remixicons](https://remixicon.com/) or on companies websites.

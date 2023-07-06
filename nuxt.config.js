@@ -40,4 +40,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // https://v2.nuxt.com/docs/configuration-glossary/configuration-generate/
+  generate: {
+    subFolders: false,
+  },
 }

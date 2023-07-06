@@ -109,8 +109,31 @@
 .index-page__container {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
-  padding: 1rem;
+  padding: 4rem 2rem;
+}
+
+#exp {
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .index-page__container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .index-page__container {
+    padding: 2rem 1rem;
+  }
+
+  .index-page__container p {
+    font-size: 1.125rem;
+  }
+
+  #exp {
+    padding-top: 1rem;
+  }
 }
 </style>
 
