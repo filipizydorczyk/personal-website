@@ -18,7 +18,7 @@
             <span class="top-bar__link-email-icon">
               <IconEmail :size="20" />
             </span>
-            <span class="top-bar__-email-address">{{ email }}</span>
+            <span class="top-bar__email-address">{{ email }}</span>
           </a>
         </div>
       </div>
@@ -28,12 +28,12 @@
 
 <style>
 .top-bar__link-email-icon,
-.top-bar__-email-address {
+.top-bar__email-address {
   vertical-align: middle;
   display: inline-block;
 }
 
-.top-bar__-email-address {
+.top-bar__email-address {
   font-size: 1rem;
 }
 
