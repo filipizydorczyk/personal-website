@@ -4,6 +4,9 @@
       background-img="img/code.jpg"
       profile-img="img/profile.jpg"
       name="Filip Izydorczyk"
+      email="filip.izydorczyk@protonmail.com"
+      linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
+      github="https://github.com/filipizydorczyk"
     />
     <div class="index-page__container">
       <section id="about-me">
@@ -113,7 +116,7 @@
 }
 
 #exp {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -132,7 +135,13 @@
   }
 
   #exp {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  #exp {
+    padding-top: 0;
   }
 }
 </style>

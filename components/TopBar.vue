@@ -5,16 +5,42 @@
       <img class="top-bar__profile" :src="profileImg" />
       <div class="top-bar__links">
         <h3>{{ name }}</h3>
+        <div class="top-bar__link-line">
+          <a v-if="github" :href="github" target="_blank">
+            <IconGithub :size="20" />
+          </a>
+          <a v-if="linkedin" :href="linkedin" target="_blank">
+            <IconLinkedIn :size="20" />
+          </a>
+        </div>
+        <div v-if="email" class="top-bar__link-line">
+          <a :href="`mailto:${email}`">
+            <span class="top-bar__link-email-icon">
+              <IconEmail :size="20" />
+            </span>
+            <span class="top-bar__-email-address">{{ email }}</span>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <style>
+.top-bar__link-email-icon,
+.top-bar__-email-address {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.top-bar__-email-address {
+  font-size: 1rem;
+}
+
 .top-bar__links {
   position: absolute;
-  top: 260px;
-  right: 320px;
+  top: 248px;
+  right: 330px;
 }
 
 .top-bar__links h3 {
@@ -39,7 +65,7 @@
 .top-bar__profile {
   position: absolute;
   top: 100px;
-  right: 0;
+  right: 2rem;
   width: 300px;
   height: 300px;
   border-radius: 100%;
@@ -51,10 +77,30 @@
     width: 200px;
     height: 200px;
     top: 150px;
+    right: 1rem;
   }
 
   .top-bar__links {
     right: 220px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .top-bar__profile {
+    right: 0;
+    left: 0;
+    top: 74px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top-bar__links {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    margin: 0 1rem;
   }
 }
 </style>
@@ -66,6 +112,9 @@ export default {
     backgroundImg: String,
     profileImg: String,
     name: String,
+    email: String,
+    linkedin: String,
+    github: String,
   },
 }
 </script>

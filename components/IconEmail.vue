@@ -1,8 +1,8 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <template>
   <svg
-    width="800px"
-    height="800px"
+    :width="size"
+    :height="size"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -16,5 +16,11 @@
 <script>
 export default {
   name: 'IconEmail',
+  props: {
+    size: {
+      type: Number,
+      default: 24,
+    },
+  },
 }
 </script>
