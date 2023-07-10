@@ -100,7 +100,7 @@
     left: 0;
     right: 0;
     max-width: 300px;
-    margin: 0 1rem;
+    padding: 0 1rem;
   }
 }
 </style>
