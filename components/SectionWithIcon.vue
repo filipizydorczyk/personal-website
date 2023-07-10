@@ -1,18 +1,22 @@
 <template>
   <div class="icon-section">
-    <img :src="icon" />
+    <img class="icon-section__main-icon" :src="icon" />
     <div>
-      <h2>{{ header }}</h2>
+      <h2><img class="icon-section__small-icon" :src="icon" /> {{ header }}</h2>
       <slot></slot>
     </div>
   </div>
 </template>
 
 <style>
-.icon-section img {
+.icon-section__main-icon {
   width: 50px;
   height: 50px;
   margin-right: 1rem;
+}
+
+.icon-section__small-icon {
+  display: none;
 }
 
 .icon-section h2 {
@@ -30,6 +34,22 @@
   display: flex;
   align-items: center;
   margin: 2rem 1rem;
+}
+
+@media screen and (max-width: 460px) {
+  .icon-section {
+    margin: 2rem 0;
+  }
+
+  .icon-section__main-icon {
+    display: none;
+  }
+
+  .icon-section__small-icon {
+    display: block;
+    width: 29px;
+    height: 29px;
+  }
 }
 </style>
 

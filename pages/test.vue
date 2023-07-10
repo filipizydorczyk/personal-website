@@ -15,17 +15,6 @@
       malesuada urna mattis quis. Etiam consectetur eros ut tempor ornare. Sed a
       erat at enim congue dignissim et et sapien.
     </p>
-    <p style="font-size: 1.125rem">
-      (1.125rem) Maecenas tortor risus, eleifend eget finibus in, tristique
-      maximus velit. Etiam nec finibus tellus. Donec et ligula at arcu venenatis
-      venenatis. Sed congue ullamcorper orci, sed imperdiet ligula vehicula et.
-      Mauris hendrerit nisi eget nunc posuere scelerisque. Quisque condimentum a
-      lorem a feugiat. Vestibulum congue nisi ultrices ipsum ullamcorper
-      fermentum. Aenean sit amet vestibulum urna, sit amet vehicula ante. Morbi
-      pharetra ac libero sit amet sollicitudin. Vivamus in metus risus. Aenean
-      mauris quam, faucibus dignissim pellentesque eu, commodo id sapien. Nulla
-      quis ipsum elit. Vestibulum aliquam consequat cursus.
-    </p>
     <p style="font-size: 1rem">
       (1rem) Quisque ultricies, urna id consectetur auctor, ligula sapien
       feugiat ipsum, et lacinia justo massa non velit. Fusce nec est elementum
