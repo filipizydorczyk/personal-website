@@ -70,26 +70,29 @@
         </SectionWithIcon>
         <SectionWithIcon icon="icon/sealcode.svg" header="Sealcode">
           <p>
-            <a href="https://www.sealcode.it/">Sealcode</a> was my first real IT
-            internship. I got there thanks to an internship program from my
-            university and after that, I did some contract jobs for them since
-            they were happy with my performance. I started working with a team
-            on their company <a href="https://www.sealcode.it/">website</a>. The
+            <a href="https://www.sealcode.it/" target="_blank">Sealcode</a> was
+            my first real IT internship. I got there thanks to an internship
+            program from my university and after that, I did some contract jobs
+            for them since they were happy with my performance. I started
+            working with a team on their company
+            <a href="https://www.sealcode.it/" target="_blank">website</a>. The
             whole idea was to write responsive components accordingly to the
             designs and then use them on the actual website. The entire website
             was rendered to static html files which resulted with great
             preformance. I worked on other websites in a similar fashion for
             their clients as well. I also worked on
-            <a href="https://github.com/sealcode/sealious">sealious</a> which is
-            their own declarative backend framework. I started with fixing bugs
-            to get familiar in a project and then started to doing new features
-            as well. This project made me familiar with many concepts such as
-            integration tests or CI/CD. Whenever a client needed a web app that
-            required some kind of backend, sealious was what we were using. They
-            used to use react for single page applications but with time,
-            technology was changed to
-            <a href="https://hotwired.dev/">hotwire</a> to pursue server side
-            rendering.
+            <a href="https://github.com/sealcode/sealious" target="_blank"
+              >sealious</a
+            >
+            which is their own declarative backend framework. I started with
+            fixing bugs to get familiar in a project and then started to doing
+            new features as well. This project made me familiar with many
+            concepts such as integration tests or CI/CD. Whenever a client
+            needed a web app that required some kind of backend, sealious was
+            what we were using. They used to use react for single page
+            applications but with time, technology was changed to
+            <a href="https://hotwired.dev/" target="_blank">hotwire</a> to
+            pursue server side rendering.
           </p>
         </SectionWithIcon>
         <SectionWithIcon icon="icon/hobbajt.png" header="Hobbajt">
