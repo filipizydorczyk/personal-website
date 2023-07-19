@@ -55,7 +55,7 @@
 
 <script>
 export default {
-  name: 'SectionWithIcon',
+  name: 'BlockWithIcon',
   props: {
     icon: String,
     header: String,
