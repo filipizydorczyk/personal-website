@@ -67,3 +67,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+}

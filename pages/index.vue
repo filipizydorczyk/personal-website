@@ -110,6 +110,9 @@
             created the entire website from scratch using wordpress with
             Elementor (wordpress extension).
           </p>
+          <Badge>
+            <span class="inline"><IconWordpress :size="20" /> WordPress </span>
+          </Badge>
         </SectionWithIcon>
       </section>
     </div>

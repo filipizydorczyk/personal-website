@@ -13,7 +13,7 @@
             <IconLinkedIn :size="20" />
           </a>
         </div>
-        <div v-if="email" class="top-bar__link-line">
+        <div v-if="email" class="top-bar__link-line--hover-disabled">
           <a :href="`mailto:${email}`">
             <span class="top-bar__link-email-icon">
               <IconEmail :size="20" />
@@ -39,13 +39,29 @@
 
 .top-bar__links {
   position: absolute;
-  top: 248px;
+  top: 240px;
   right: 330px;
 }
 
 .top-bar__links h3 {
   color: white;
   margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+.top-bar__link-line,
+.top-bar__link-line--hover-disabled {
+  margin-bottom: 0.25rem;
+}
+
+.top-bar__link-line svg,
+.top-bar__link-line img {
+  transition: transform 0.2s;
+}
+
+.top-bar__link-line svg:hover,
+.top-bar__link-line img:hover {
+  transform: scale(1.25);
 }
 
 .top-bar__container {

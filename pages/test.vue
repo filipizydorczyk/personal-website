@@ -38,7 +38,8 @@
       amet est nulla.
     </p>
     <p>
-      Margin values to keep: 4rem, 2rem, 1.5rem, 1.25rem, 1.125rem, 1rem, 0.5rem
+      Margin values to keep: 4rem, 2rem, 1.5rem, 1.25rem, 1.125rem, 1rem,
+      0.5rem, 0.25rem
     </p>
   </div>
 </template>
