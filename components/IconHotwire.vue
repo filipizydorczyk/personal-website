@@ -1,8 +1,8 @@
 <template>
   <!-- Taken from: https://hotwired.dev/ -->
   <svg
-    :width="size"
-    :height="size"
+    :width="width || size"
+    :height="height || size"
     viewBox="0 0 289.69 79.8"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -44,6 +44,12 @@ export default {
     size: {
       type: Number,
       default: 24,
+    },
+    width: {
+      type: Number,
+    },
+    height: {
+      type: Number,
     },
   },
 }

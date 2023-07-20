@@ -14,3 +14,7 @@ This is project for my website. Vue.js is used so that I can create reusuable co
 # Resources
 
 Some logos comes from svgrepo (these have a comment in component file) and other were searched on [seek logo](https://seeklogo.com/), [wikimedia](https://commons.wikimedia.org), [remixicons](https://remixicon.com/) or on companies websites.
+
+# Preview
+
+![](./screenshot.png)

@@ -5,7 +5,7 @@
 <style>
 .badge {
   width: min-content;
-  background-color: #a2a2a2;
+  background-color: #c1c1c1;
   padding: 0.5rem 1rem;
   margin: 0;
   border-radius: 1.5rem;

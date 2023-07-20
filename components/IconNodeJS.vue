@@ -1,9 +1,9 @@
 <template>
   <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
   <svg
-    :width="size"
-    :height="size"
-    viewBox="0 0 64 64"
+    :width="width || size"
+    :height="height || size"
+    viewBox="0 20 64 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,6 +35,12 @@ export default {
     size: {
       type: Number,
       default: 24,
+    },
+    width: {
+      type: Number,
+    },
+    height: {
+      type: Number,
     },
   },
 }

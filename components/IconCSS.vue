@@ -1,7 +1,7 @@
 <template>
   <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
   <svg
-    fill="#000000"
+    fill="#2194F0"
     :width="size"
     :height="size"
     viewBox="-1.5 0 24 24"

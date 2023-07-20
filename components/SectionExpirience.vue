@@ -31,13 +31,15 @@
           <span class="inline"><IconJava :size="20" /> Java </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconSpringboot :size="20" /> Springboot </span>
+          <span class="inline">
+            <IconSpringboot :width="100" :height="20" />
+          </span>
         </Badge>
         <Badge>
           <span class="inline"><IconAdobe :size="20" /> AEM </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconAzure :size="20" /> Azure </span>
+          <span class="inline"><IconAzure :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline">
@@ -70,7 +72,7 @@
           <span class="inline"><IconReact :size="20" /> React </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconAzure :size="20" /> Azure </span>
+          <span class="inline"><IconAzure :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline"><IconTypescript :size="20" /> Typescript </span>
@@ -105,13 +107,13 @@
       </p>
       <BadgeContainer>
         <Badge>
-          <span class="inline"><IconNodeJS :size="20" /> NodeJS </span>
+          <span class="inline"><IconNodeJS :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconPhp :size="20" /> Sass </span>
+          <span class="inline"><IconSass :size="20" /> Sass </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconMongoDB :size="20" /> Mongo&nbsp;DB </span>
+          <span class="inline"><IconMongoDB :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline"><IconDatabase :size="20" /> MySQL </span>
@@ -132,7 +134,7 @@
           <span class="inline"> Sealious </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconHotwire :size="20" /> Hotwire </span>
+          <span class="inline"><IconHotwire :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline"
