@@ -1,9 +1,17 @@
 <template>
-  <div class="badge-container"><slot></slot></div>
+  <div class="badge-container">
+    <div class="badge-container__wrapper">
+      <slot></slot>
+    </div>
+  </div>
 </template>
 
 <style>
 .badge-container {
+  width: 100%;
+}
+
+.badge-container__wrapper {
   padding: 1rem 0;
   display: flex;
   flex-wrap: wrap;
@@ -14,9 +22,13 @@
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 650px) {
   .badge-container {
-    justify-content: center;
+    overflow-x: scroll;
+  }
+
+  .badge-container__wrapper {
+    width: max-content;
   }
 }
 </style>

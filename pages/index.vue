@@ -45,12 +45,6 @@
     padding-top: 0.5rem;
   }
 }
-
-@media screen and (max-width: 510px) {
-  #exp {
-    padding-top: 0;
-  }
-}
 </style>
 
 <script lang="ts">

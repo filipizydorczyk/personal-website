@@ -1,7 +1,7 @@
 <template>
   <div class="icon-section">
     <img class="icon-section__main-icon" :src="icon" />
-    <div>
+    <div class="icon-section__main-content">
       <h2><img class="icon-section__small-icon" :src="icon" /> {{ header }}</h2>
       <slot></slot>
     </div>
@@ -9,6 +9,10 @@
 </template>
 
 <style>
+.icon-section__main-content {
+  width: 100%;
+}
+
 .icon-section__main-icon {
   width: 50px;
   height: 50px;
@@ -36,9 +40,9 @@
   margin: 2rem 1rem;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 650px) {
   .icon-section {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .icon-section__main-icon {
