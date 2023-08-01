@@ -72,3 +72,25 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .page-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .page-container {
+    padding: 2rem 1rem;
+  }
+
+  .page-container p {
+    font-size: 1.125rem;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="index-page">
+  <div class="article-page">
     <TopBar
       background-img="img/code.jpg"
       profile-img="img/profile.jpg"
@@ -9,28 +9,31 @@
       github="https://github.com/filipizydorczyk"
     />
     <div class="page-container">
-      <SectionAboutMe />
-      <SectionExpirience />
+      <p>Articles - {{ $route.query.article }}</p>
+      <h1>{{ title }}</h1>
+      <div v-html="article"></div>
     </div>
   </div>
 </template>
-
-<style>
-#exp {
-  padding-top: 1rem;
-}
-
-@media screen and (max-width: 700px) {
-  #exp {
-    padding-top: 0.5rem;
-  }
-}
-</style>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
+  name: 'ArticlePage',
+  data() {
+    return {
+      title: '',
+      article: '',
+    }
+  },
+  async created() {
+    const article = await fetch(
+      `http://localhost:3000/api/v1/articles/Test`
+    ).then((res) => res.json())
+
+    this.title = article.name
+    this.article = article.content
+  },
 })
 </script>
