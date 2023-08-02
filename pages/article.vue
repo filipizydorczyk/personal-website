@@ -9,28 +9,44 @@
       github="https://github.com/filipizydorczyk"
     />
     <div class="page-container">
-      <p>Articles - {{ $route.query.article }}</p>
-      <h1>{{ title }}</h1>
+      <p class="article-breadcrumbs">
+        <a href="/articles">Articles</a> - {{ $route.query.article }}
+      </p>
+      <h1 class="article-header">{{ title }}</h1>
       <div v-html="article"></div>
     </div>
   </div>
 </template>
 
+<style>
+.article-breadcrumbs {
+  margin-bottom: 0.25rem;
+}
+
+.article-header {
+  margin-top: 0;
+}
+</style>
+
 <script lang="ts">
 import Vue from 'vue'
+
+const HOSTNAME = 'http://localhost:3000'
+// const HOSTNAME = 'https://cms.filipizydorczyk.pl';
 
 export default Vue.extend({
   name: 'ArticlePage',
   data() {
     return {
       title: '',
-      article: '',
+      article: '<p>... loading</p>',
     }
   },
   async created() {
-    const article = await fetch(
-      `http://localhost:3000/api/v1/articles/Test`
-    ).then((res) => res.json())
+    const name = this.$route.query.article
+    const article = await fetch(`${HOSTNAME}/api/v1/articles/${name}`)
+      .then((res) => res.json())
+      .catch(() => '<p>Article was not found...</p>')
 
     this.title = article.name
     this.article = article.content

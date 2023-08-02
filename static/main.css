@@ -68,6 +68,29 @@ a {
   color: inherit;
 }
 
+code,
+samp {
+  background-color: #00172b14;
+  border-radius: 5px;
+  color: #000;
+  display: inline-block;
+  margin: 0 0.1rem;
+  padding: 0 0.5rem;
+}
+
+pre {
+  margin: 1rem auto;
+}
+
+pre code,
+pre samp {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  white-space: pre-wrap;
+  overflow-x: scroll;
+}
+
 .inline {
   display: flex;
   justify-content: space-between;
