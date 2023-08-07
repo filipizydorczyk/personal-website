@@ -1,5 +1,5 @@
 <template>
-    <div class="article-card">
+    <div :class="`article-card ${hasPadding ? `article-card--with-pading` : ``}`">
         <a :href="href"><img class="article-card__thumbnail" :src="thumbnail" /></a>
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>
@@ -11,6 +11,9 @@
 
 .article-card {
     width: 100%;
+}
+
+.article-card--with-pading{
     padding: 1rem;
 }
 
@@ -30,6 +33,7 @@ export default {
         description: String,
         thumbnail: String,
         href: String,
+        hasPadding: Boolean
     },
 }
 </script>
