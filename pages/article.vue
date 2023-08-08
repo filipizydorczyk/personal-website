@@ -7,11 +7,19 @@
       email="filip.izydorczyk@protonmail.com"
       linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
       github="https://github.com/filipizydorczyk"
+      :links="[
+        { label: 'About me', href: '/' },
+        { label: 'Articles', href: '/articles' },
+      ]"
+      active="/articles"
     />
     <div class="page-container">
-      <p class="article-breadcrumbs">
-        <a href="/articles">Articles</a> - {{ $route.query.article }}
-      </p>
+      <div class="article-info">
+        <p class="article-info__breadcrumbs">
+          <a href="/articles">Articles</a> - {{ $route.query.article }}
+        </p>
+        <p class="article-info__read-on">Also read on:</p>
+      </div>
       <h1 class="article-header">{{ title }}</h1>
       <div v-html="article"></div>
     </div>
@@ -19,7 +27,13 @@
 </template>
 
 <style>
-.article-breadcrumbs {
+.article-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-info__breadcrumbs,
+.article-info__read-on {
   margin-bottom: 0.25rem;
 }
 

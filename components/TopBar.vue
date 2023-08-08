@@ -2,6 +2,20 @@
   <nav class="top-bar">
     <img class="top-bar__background" :src="backgroundImg" />
     <div class="top-bar__container">
+      <div class="top-bar__menu">
+        <a
+          v-for="link in links"
+          :class="
+            active === link.href
+              ? 'top-bar__menu-item--active'
+              : 'top-bar__menu-item'
+          "
+          v-bind:key="link.href"
+          :href="link.href"
+        >
+          {{ link.label }}
+        </a>
+      </div>
       <img class="top-bar__profile" :src="profileImg" />
       <div class="top-bar__links">
         <h3>{{ name }}</h3>
@@ -27,6 +41,22 @@
 </template>
 
 <style>
+.top-bar__menu-item--active {
+  font-weight: 600 !important;
+  text-decoration: underline;
+}
+
+.top-bar__menu {
+  padding: 1rem 1.5rem;
+}
+
+.top-bar__menu a {
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+  font-weight: 400;
+}
+
 .top-bar__link-email-icon,
 .top-bar__email-address {
   vertical-align: middle;
@@ -80,7 +110,7 @@
 
 .top-bar__profile {
   position: absolute;
-  top: 100px;
+  top: 75px;
   right: 2rem;
   width: 300px;
   height: 300px;
@@ -89,6 +119,14 @@
 }
 
 @media screen and (max-width: 750px) {
+  .top-bar__menu {
+    padding: 0.5rem;
+  }
+
+  .top-bar__menu a {
+    font-size: 1rem;
+  }
+
   .top-bar__profile {
     width: 200px;
     height: 200px;
@@ -131,6 +169,8 @@ export default {
     email: String,
     linkedin: String,
     github: String,
+    links: Array,
+    active: String,
   },
 }
 </script>

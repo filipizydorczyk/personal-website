@@ -7,6 +7,11 @@
       email="filip.izydorczyk@protonmail.com"
       linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
       github="https://github.com/filipizydorczyk"
+      :links="[
+        { label: 'About me', href: '/' },
+        { label: 'Articles', href: '/articles' },
+      ]"
+      active="/"
     />
     <div class="page-container">
       <SectionAboutMe />

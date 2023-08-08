@@ -86,7 +86,7 @@ pre code,
 pre samp {
   display: block;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 1.5rem;
   white-space: pre-wrap;
   overflow-x: scroll;
 }
