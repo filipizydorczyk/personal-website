@@ -1,24 +1,17 @@
 <template>
   <div class="article-page">
-    <TopBar
-      background-img="img/code.jpg"
-      profile-img="img/profile.jpg"
-      name="Filip Izydorczyk"
-      email="filip.izydorczyk@protonmail.com"
-      linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
-      github="https://github.com/filipizydorczyk"
-      :links="[
+    <TopBar background-img="img/code.jpg" profile-img="img/profile.jpg" name="Filip Izydorczyk"
+      email="filip.izydorczyk@protonmail.com" linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
+      github="https://github.com/filipizydorczyk" :links="[
         { label: 'About me', href: '/' },
         { label: 'Articles', href: '/articles' },
-      ]"
-      active="/articles"
-    />
+      ]" active="/articles" />
     <div class="page-container">
       <div class="article-info">
         <p class="article-info__breadcrumbs">
           <a href="/articles">Articles</a> - {{ $route.query.article }}
         </p>
-        <p class="article-info__read-on">Also read on:</p>
+        <p v-if="gits" class="article-info__read-on"> <a :href="gits" title="See on gits!" target="_blank" > <IconGithub color="#333" :size="18"/> </a> </p>
       </div>
       <h1 class="article-header">{{ title }}</h1>
       <div v-html="article"></div>
@@ -53,6 +46,7 @@ export default Vue.extend({
   data() {
     return {
       title: '',
+      gits: '',
       article: '<p>... loading</p>',
     }
   },
@@ -64,6 +58,7 @@ export default Vue.extend({
 
     this.title = article.name
     this.article = article.content
+    this.gits = article.metadata?.related_links?.gits || ''
   },
 })
 </script>

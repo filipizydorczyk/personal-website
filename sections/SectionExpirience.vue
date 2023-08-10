@@ -49,6 +49,7 @@
         <Badge>
           <span class="inline"><IconPhp :size="20" /> php </span>
         </Badge>
+        <Badge><img style="width: auto; height: 20px; display: block;" src="icon/liquibase.png"/></Badge>
         <Badge>
           <span class="inline"><IconJira :size="20" /> Jira </span>
         </Badge>
