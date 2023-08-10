@@ -89,7 +89,7 @@
         <a href="https://www.sealcode.it/" target="_blank">website</a>. The
         whole idea was to write responsive components accordingly to the designs
         and then use them on the actual website. The entire website was rendered
-        to static html files which resulted with great preformance. I worked on
+        to static html files which resulted with great performance. I worked on
         other websites in a similar fashion for their clients as well. I also
         worked on
         <a href="https://github.com/sealcode/sealious" target="_blank"
@@ -150,7 +150,7 @@
         their clients websites. It was mainly WordPress. For the most part, I
         was responsible for creating backups and fixing broken stuff after
         updating their extensions. But from time to time there were more
-        chalenging tasks as well. Sometimes it was needed to add custom css to
+        challenging tasks as well. Sometimes it was needed to add custom css to
         get UI elements that were not achievable with the theme itself and
         sometimes it was missing functionality that we needed to add. If there
         was no extension matching clients needs, we had to add this
