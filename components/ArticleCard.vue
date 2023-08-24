@@ -21,6 +21,9 @@
   height: 200px;
   object-fit: cover;
   border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
+  -moz-box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
+  box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
 }
 </style>
 

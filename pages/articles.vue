@@ -1,18 +1,27 @@
 <template>
   <div class="articles-page">
-    <TopBar background-img="img/code.jpg" profile-img="img/profile.jpg" name="Filip Izydorczyk"
-      email="filip.izydorczyk@protonmail.com" linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
-      github="https://github.com/filipizydorczyk" :links="[
+    <TopBar
+      background-img="img/code.jpg"
+      profile-img="img/profile.jpg"
+      name="Filip Izydorczyk"
+      email="filip.izydorczyk@protonmail.com"
+      linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
+      github="https://github.com/filipizydorczyk"
+      :links="[
         { label: 'About me', href: '/' },
         { label: 'Articles', href: '/articles' },
-      ]" active="/articles" />
+      ]"
+      active="/articles"
+    />
     <div class="page-container">
       <h1>My publications</h1>
       <p class="articles-page__brief">
-        I absolutely love exploring new technologies and playing around with them. Whether it's testing out the latest
-        gadgets or trying my hand at coding, I find joy in experimenting. This blog is where I plan to share anything cool
-        or exciting I come up with during my tech adventures. While I'll be sharing my findings on various platforms, this
-        blog will serve as the central hub where everything comes together in one place.
+        I absolutely love exploring new technologies and playing around with
+        them. Whether it's testing out the latest gadgets or trying my hand at
+        coding, I find joy in experimenting. This blog is where I plan to share
+        anything cool or exciting I come up with during my tech adventures.
+        While I'll be sharing my findings on various platforms, this blog will
+        serve as the central hub where everything comes together in one place.
       </p>
       <ArticleFeed :articles="articles" />
       <div class="articles-page__pagination">
@@ -42,7 +51,7 @@
 import Vue from 'vue'
 
 const HOSTNAME = 'http://localhost:3000'
-// const HOSTNAME = 'https://cms.filipizydorczyk.pl';
+// const HOSTNAME = 'https://cms.filipizydorczyk.pl'
 
 export default Vue.extend({
   name: 'ArticlesPage',
@@ -59,12 +68,14 @@ export default Vue.extend({
       window.location.href = `/articles?page=${this.total}`
     },
     goNext() {
-      window.location.href = `/articles?page=${this.currentPage < this.total ? this.currentPage + 1 : this.total
-        }`
+      window.location.href = `/articles?page=${
+        this.currentPage < this.total ? this.currentPage + 1 : this.total
+      }`
     },
     goBack() {
-      window.location.href = `/articles?page=${this.currentPage > 1 ? this.currentPage - 1 : this.currentPage
-        }`
+      window.location.href = `/articles?page=${
+        this.currentPage > 1 ? this.currentPage - 1 : this.currentPage
+      }`
     },
     goFirst() {
       window.location.href = '/articles?page=1'
