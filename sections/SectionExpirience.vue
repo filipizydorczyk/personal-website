@@ -32,14 +32,14 @@
         </Badge>
         <Badge>
           <span class="inline">
-            <IconSpringboot :width="100" :height="20" />
+            <IconSpringboot :width="75" :height="20" />
           </span>
         </Badge>
         <Badge>
           <span class="inline"><IconAdobe :size="20" /> AEM </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconAzure :width="100" :height="20" /> </span>
+          <span class="inline"><IconAzure :width="58" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline">
@@ -49,7 +49,11 @@
         <Badge>
           <span class="inline"><IconPhp :size="20" /> php </span>
         </Badge>
-        <Badge><img style="width: auto; height: 20px; display: block;" src="icon/liquibase.png"/></Badge>
+        <Badge
+          ><img
+            style="width: auto; height: 20px; display: block"
+            src="icon/liquibase.png"
+        /></Badge>
         <Badge>
           <span class="inline"><IconJira :size="20" /> Jira </span>
         </Badge>
@@ -73,7 +77,7 @@
           <span class="inline"><IconReact :size="20" /> React </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconAzure :width="100" :height="20" /> </span>
+          <span class="inline"><IconAzure :width="58" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline"><IconTypescript :size="20" /> Typescript </span>
@@ -108,7 +112,7 @@
       </p>
       <BadgeContainer>
         <Badge>
-          <span class="inline"><IconNodeJS :width="100" :height="20" /> </span>
+          <span class="inline"><IconNodeJS :width="64" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline"><IconSass :size="20" /> Sass </span>

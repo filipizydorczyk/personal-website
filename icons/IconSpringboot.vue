@@ -7,7 +7,7 @@
     y="0px"
     :width="width || size"
     :height="height || size"
-    viewBox="0 0 1500 417"
+    viewBox="0 0 1800 417"
     class="logo"
   >
     <g>
