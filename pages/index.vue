@@ -9,7 +9,7 @@
       github="https://github.com/filipizydorczyk"
       :links="[
         { label: 'About me', href: '/' },
-        { label: 'Articles', href: '/articles' },
+        { label: 'Blog', href: '/articles' },
       ]"
       active="/"
     />

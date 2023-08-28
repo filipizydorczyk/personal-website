@@ -9,7 +9,7 @@
       github="https://github.com/filipizydorczyk"
       :links="[
         { label: 'About me', href: '/' },
-        { label: 'Articles', href: '/articles' },
+        { label: 'Blog', href: '/articles' },
       ]"
       active="/articles"
     />
@@ -50,8 +50,8 @@
 <script>
 import Vue from 'vue'
 
-const HOSTNAME = 'http://localhost:3000'
-// const HOSTNAME = 'https://cms.filipizydorczyk.pl'
+// const HOSTNAME = 'http://localhost:3000'
+const HOSTNAME = 'https://cms.filipizydorczyk.pl'
 
 export default Vue.extend({
   name: 'ArticlesPage',
