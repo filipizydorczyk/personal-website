@@ -23,12 +23,18 @@
 }
 
 @media screen and (max-width: 650px) {
-  .badge-container {
-    overflow-x: scroll;
+  .badge-container .badge {
+    background-color: transparent;
+    margin: 0;
+    padding: 0 1rem 0.5rem 0;
+  }
+
+  .badge-container .badge label {
+    display: none;
   }
 
   .badge-container__wrapper {
-    width: max-content;
+    justify-content: center;
   }
 }
 </style>

@@ -16,19 +16,34 @@
       </p>
       <BadgeContainer>
         <Badge>
-          <span class="inline"><IconReact :size="20" /> React </span>
+          <span class="inline">
+            <IconReact :size="20" />
+            <label>React</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconTypescript :size="20" /> Typescript </span>
+          <span class="inline">
+            <IconTypescript :size="20" />
+            <label>Typescript</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconVue :size="20" /> Vue.js </span>
+          <span class="inline">
+            <IconVue :size="20" />
+            <label>Vue.js</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconDatabase :size="20" /> MySQL </span>
+          <span class="inline">
+            <IconDatabase :size="20" />
+            <label>MySQL</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconJava :size="20" /> Java </span>
+          <span class="inline">
+            <IconJava :size="20" />
+            <label>Java</label>
+          </span>
         </Badge>
         <Badge>
           <span class="inline">
@@ -36,26 +51,37 @@
           </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconAdobe :size="20" /> AEM </span>
+          <span class="inline">
+            <IconAdobe :size="20" />
+            <label>AEM</label>
+          </span>
         </Badge>
         <Badge>
           <span class="inline"><IconAzure :width="58" :height="20" /> </span>
         </Badge>
         <Badge>
           <span class="inline">
-            <IconGitlab :size="20" /> Gitlab&nbsp;CI/CD
+            <IconGitlab :size="20" />
+            <label>Gitlab&nbsp;CI/CD</label>
           </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconPhp :size="20" /> php </span>
+          <span class="inline">
+            <IconPhp :size="20" />
+            <label>php</label>
+          </span>
         </Badge>
-        <Badge
-          ><img
+        <Badge>
+          <img
             style="width: auto; height: 20px; display: block"
             src="icon/liquibase.png"
-        /></Badge>
+          />
+        </Badge>
         <Badge>
-          <span class="inline"><IconJira :size="20" /> Jira </span>
+          <span class="inline">
+            <IconJira :size="20" />
+            <label>Jira</label>
+          </span>
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>
@@ -74,13 +100,19 @@
       </p>
       <BadgeContainer>
         <Badge>
-          <span class="inline"><IconReact :size="20" /> React </span>
+          <span class="inline">
+            <IconReact :size="20" />
+            <label>React</label>
+          </span>
         </Badge>
         <Badge>
           <span class="inline"><IconAzure :width="58" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconTypescript :size="20" /> Typescript </span>
+          <span class="inline">
+            <IconTypescript :size="20" />
+            <label>Typescript</label>
+          </span>
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>
@@ -115,35 +147,54 @@
           <span class="inline"><IconNodeJS :width="64" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconSass :size="20" /> Sass </span>
+          <span class="inline">
+            <IconSass :size="20" />
+            <label>Sass</label>
+          </span>
         </Badge>
         <Badge>
           <span class="inline"><IconMongoDB :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconDatabase :size="20" /> MySQL </span>
+          <span class="inline">
+            <IconDatabase :size="20" />
+            <label>MySQL</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconReact :size="20" /> React </span>
+          <span class="inline">
+            <IconReact :size="20" />
+            <label>React</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconElectron :size="20" /> Electron </span>
+          <span class="inline">
+            <IconElectron :size="20" />
+            <label>Electron</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconTypescript :size="20" /> Typescript </span>
+          <span class="inline">
+            <IconTypescript :size="20" />
+            <label>Typescript</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconJenkins :size="20" /> Jenkins </span>
+          <span class="inline">
+            <IconJenkins :size="20" />
+            <label>Jenkins</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"> Sealious </span>
+          <span class="inline"> <label>Sealious</label> </span>
         </Badge>
         <Badge>
           <span class="inline"><IconHotwire :width="100" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline"
-            ><IconPhabricator :size="20" /> Phabricator
+          <span class="inline">
+            <IconPhabricator :size="20" />
+            <label>Phabricator</label>
           </span>
         </Badge>
       </BadgeContainer>
@@ -165,19 +216,34 @@
       </p>
       <BadgeContainer>
         <Badge>
-          <span class="inline"><IconWordpress :size="20" /> WordPress </span>
+          <span class="inline">
+            <IconWordpress :size="20" />
+            <label>WordPress</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconPhp :size="20" /> php </span>
+          <span class="inline">
+            <IconPhp :size="20" />
+            <label>php</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconJavascript :size="20" /> javascript </span>
+          <span class="inline">
+            <IconJavascript :size="20" />
+            <label>javascript</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconCSS :size="20" /> CSS </span>
+          <span class="inline">
+            <IconCSS :size="20" />
+            <label>CSS</label>
+          </span>
         </Badge>
         <Badge>
-          <span class="inline"><IconElementor :size="20" /> Elementor </span>
+          <span class="inline">
+            <IconElementor :size="20" />
+            <label>Elementor</label>
+          </span>
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>

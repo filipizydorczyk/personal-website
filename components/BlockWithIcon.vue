@@ -2,7 +2,10 @@
   <div class="icon-section">
     <img class="icon-section__main-icon" :src="icon" />
     <div class="icon-section__main-content">
-      <h2><img class="icon-section__small-icon" :src="icon" /> {{ header }}</h2>
+      <h2 class="icon-section__header">
+        <img class="icon-section__small-icon" :src="icon" />
+        <span>{{ header }}</span>
+      </h2>
       <slot></slot>
     </div>
   </div>
@@ -41,6 +44,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .icon-section__header {
+    display: flex;
+  }
+
   .icon-section {
     margin: 1rem 0;
   }
@@ -53,6 +60,7 @@
     display: block;
     width: 29px;
     height: 29px;
+    margin-right: 1rem;
   }
 }
 </style>
