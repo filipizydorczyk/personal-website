@@ -1,8 +1,12 @@
 <template>
   <div :class="`article-card ${hasPadding ? `article-card--with-pading` : ``}`">
-    <a :href="href"><img class="article-card__thumbnail" :src="thumbnail" /></a>
-    <h2>{{ title }}</h2>
-    <p>{{ description }}</p>
+    <div class="article-card__content-wraper">
+      <a :href="href">
+        <img class="article-card__thumbnail" :src="thumbnail" />
+      </a>
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
+    </div>
     <a :href="href">Read more</a>
   </div>
 </template>
@@ -10,6 +14,14 @@
 <style>
 .article-card {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-card a {
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .article-card--with-pading {

@@ -81,7 +81,7 @@
 
 .top-bar__link-line,
 .top-bar__link-line--hover-disabled {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .top-bar__link-line svg,
