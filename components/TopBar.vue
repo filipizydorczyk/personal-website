@@ -69,7 +69,7 @@
 
 .top-bar__links {
   position: absolute;
-  top: 240px;
+  top: 220px;
   right: 330px;
 }
 

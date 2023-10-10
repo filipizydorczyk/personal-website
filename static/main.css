@@ -9,6 +9,7 @@
 *::after,
 *::before {
   font-family: Cantarell;
+  line-height: 175%;
   box-sizing: border-box;
 }
 
@@ -107,6 +108,7 @@ pre samp {
   display: block;
   width: 100%;
   padding: 1.5rem;
+  line-height: 150%;
   white-space: pre-wrap;
   overflow-x: scroll;
 }

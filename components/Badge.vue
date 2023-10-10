@@ -3,6 +3,10 @@
 </template>
 
 <style>
+.badge * {
+  line-height: 100%;
+}
+
 .badge {
   width: min-content;
   background-color: #c1c1c1;
