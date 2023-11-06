@@ -47,7 +47,9 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-  name: 'TestPage',
-})
+// export default Vue.extend({
+//   name: 'TestPage',
+// })
+
+export default {};
 </script>

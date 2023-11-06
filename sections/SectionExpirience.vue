@@ -1,6 +1,6 @@
 <template>
   <section id="exp">
-    <BlockWithIcon icon="icon/emakina.jpg" header="Emakina / EPAM">
+    <BlockWithIcon icon="/icon/emakina.jpg" header="Emakina / EPAM">
       <p>
         I continued path of the web developer at
         <a href="https://www.emakina.com/int-en" target="_blank">Emakina</a>
@@ -74,7 +74,7 @@
         <Badge>
           <img
             style="width: auto; height: 20px; display: block"
-            src="icon/liquibase.png"
+            src="/icon/liquibase.png"
           />
         </Badge>
         <Badge>
@@ -85,7 +85,7 @@
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>
-    <BlockWithIcon icon="icon/capgemini.svg" header="Capgemini">
+    <BlockWithIcon icon="/icon/capgemini.svg" header="Capgemini">
       <p>
         Another internship took place in
         <a href="https://www.capgemini.com/us-en/" target="_blank">Capgemini</a>
@@ -116,7 +116,7 @@
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>
-    <BlockWithIcon icon="icon/sealcode.svg" header="Sealcode">
+    <BlockWithIcon icon="/icon/sealcode.svg" header="Sealcode">
       <p>
         <a href="https://www.sealcode.it/" target="_blank">Sealcode</a> was my
         first real IT internship. I got there thanks to an internship program
@@ -199,7 +199,7 @@
         </Badge>
       </BadgeContainer>
     </BlockWithIcon>
-    <BlockWithIcon icon="icon/hobbajt.png" header="Hobbajt">
+    <BlockWithIcon icon="/icon/hobbajt.png" header="Hobbajt">
       <p>
         In <a href="https://hobbajt.pl/" target="_blank">hobbajt</a> I actually
         started as an IT teacher for kids but I quickly started to help with

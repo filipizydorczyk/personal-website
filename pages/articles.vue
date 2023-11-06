@@ -48,53 +48,57 @@
 </style>
 
 <script>
-import Vue from 'vue'
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
 // const HOSTNAME = 'http://localhost:3000'
-const HOSTNAME = 'https://cms.filipizydorczyk.pl'
+const HOSTNAME = "https://cms.filipizydorczyk.pl";
 
-export default Vue.extend({
-  name: 'ArticlesPage',
-  data() {
-    const page = this.$route.query.page
-    return {
-      articles: [],
-      currentPage: Number(page) || 1,
-      total: 1,
-    }
-  },
-  methods: {
-    goLast() {
-      window.location.href = `/articles?page=${this.total}`
-    },
-    goNext() {
-      window.location.href = `/articles?page=${
-        this.currentPage < this.total ? this.currentPage + 1 : this.total
-      }`
-    },
-    goBack() {
-      window.location.href = `/articles?page=${
-        this.currentPage > 1 ? this.currentPage - 1 : this.currentPage
-      }`
-    },
-    goFirst() {
-      window.location.href = '/articles?page=1'
-    },
-  },
-  async created() {
-    const page = this.$route.query.page
-    const article = await fetch(
-      `${HOSTNAME}/api/v1/articles?page=${page || 1}`
-    ).then((res) => res.json())
+export default {
+  setup() {
+    const route = useRoute();
 
-    this.currentPage = article.page
-    this.total = article.pages
-    this.articles = article.content.map((art) => ({
-      title: art.name,
-      thumbnail: art.metadata?.thumbnail,
-      href: `/article?article=${art.name}`,
-      description: art.metadata?.description,
-    }))
+    const articles = ref([]);
+    const currentPage = ref(route.query.page || 1);
+    const total = ref(1);
+
+    const fetchArticles = async () => {
+      const page = route.query.page;
+      const response = await fetch(
+        `${HOSTNAME}/api/v1/articles?page=${page || 1}`
+      ).then((res) => res.json());
+
+      currentPage.value = response.page;
+      total.value = response.pages;
+      articles.value = response.content.map((art) => ({
+        title: art.name,
+        thumbnail: art.metadata?.thumbnail,
+        href: `/article?article=${art.name}`,
+        description: art.metadata?.description,
+      }));
+    };
+
+    const goLast = () => {
+      window.location.href = `/articles?page=${total.value}`;
+    };
+    const goNext = () => {
+      window.location.href = `/articles?page=${
+        currentPage.value < total.value ? currentPage.value + 1 : total.value
+      }`;
+    };
+    const goBack = () => {
+      window.location.href = `/articles?page=${
+        currentPage.value > 1 ? currentPage.value - 1 : currentPage.value
+      }`;
+    };
+    const goFirst = () => {
+      window.location.href = "/articles?page=1";
+    };
+
+    onMounted(fetchArticles);
+
+    return { articles, goLast, goNext, goBack, goFirst };
   },
-})
+};
+
 </script>

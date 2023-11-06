@@ -1,6 +1,6 @@
 <template>
   <nav class="top-bar">
-    <img class="top-bar__background" :src="backgroundImg" />
+    <img class="top-bar__background" :src="`/${backgroundImg}`" />
     <div class="top-bar__container">
       <div class="top-bar__menu">
         <a
@@ -16,7 +16,7 @@
           {{ link.label }}
         </a>
       </div>
-      <img class="top-bar__profile" :src="profileImg" />
+      <img class="top-bar__profile" :src="`/${profileImg}`" />
       <div class="top-bar__links">
         <h3>{{ name }}</h3>
         <div class="top-bar__link-line">

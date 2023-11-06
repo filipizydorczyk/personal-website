@@ -47,29 +47,56 @@
 </style>
 
 <script lang="ts">
-import Vue from 'vue'
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
 // const HOSTNAME = 'http://localhost:3000'
-const HOSTNAME = 'https://cms.filipizydorczyk.pl'
+const HOSTNAME = "https://cms.filipizydorczyk.pl";
 
-export default Vue.extend({
-  name: 'ArticlePage',
-  data() {
-    return {
-      title: '',
-      gits: '',
-      article: '<p>... loading</p>',
-    }
-  },
-  async created() {
-    const name = this.$route.query.article
-    const article = await fetch(`${HOSTNAME}/api/v1/articles/${name}`)
-      .then((res) => res.json())
-      .catch(() => '<p>Article was not found...</p>')
+export default {
+  setup() {
+    const route = useRoute();
 
-    this.title = article.name
-    this.article = article.content
-    this.gits = article.metadata?.related_links?.gits || ''
+    const title = ref("");
+    const gits = ref("");
+    const article = ref("<p>... loading</p>");
+
+    const fetchArticle = async () => {
+      const name = route.query.article;
+      console.log(name);
+      const response = await fetch(`${HOSTNAME}/api/v1/articles/${name}`)
+        .then((res) => res.json())
+        .catch(() => "<p>Article was not found...</p>");
+
+      title.value = response.name;
+      article.value = response.content;
+      gits.value = response.metadata?.related_links?.gits || "";
+    };
+
+    onMounted(fetchArticle);
+
+    return { title, gits, article };
   },
-})
+};
+
+// export default Vue.extend({
+//   name: 'ArticlePage',
+//   data() {
+//     return {
+//       title: '',
+//       gits: '',
+//       article: '<p>... loading</p>',
+//     }
+//   },
+//   async created() {
+//     const name = this.$route.query.article
+//     const article = await fetch(`${HOSTNAME}/api/v1/articles/${name}`)
+//       .then((res) => res.json())
+//       .catch(() => '<p>Article was not found...</p>')
+
+//     this.title = article.name
+//     this.article = article.content
+//     this.gits = article.metadata?.related_links?.gits || ''
+//   },
+// })
 </script>
