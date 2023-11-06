@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  imports: {
+    dirs: ["composables"],
+  },
   components: ["~/components", "~/icons", "~/sections"],
   app: {
     head: {

@@ -1,18 +1,6 @@
 <template>
   <div class="index-page">
-    <TopBar
-      background-img="img/code.jpg"
-      profile-img="img/profile.jpg"
-      name="Filip Izydorczyk"
-      email="filip.izydorczyk@protonmail.com"
-      linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
-      github="https://github.com/filipizydorczyk"
-      :links="[
-        { label: 'About me', href: '/' },
-        { label: 'Blog', href: '/articles' },
-      ]"
-      active="/"
-    />
+    <TopBar :data="topBarData" active="/" />
     <div class="page-container">
       <SectionAboutMe />
       <SectionExpirience />
@@ -33,11 +21,18 @@
 </style>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
+import { useStore } from "~/composables/useStore";
 
 // export default Vue.extend({
 //   name: 'IndexPage',
 // })
 
-export default {};
+export default {
+  setup() {
+    const { topBarData } = useStore();
+
+    return { topBarData };
+  },
+};
 </script>

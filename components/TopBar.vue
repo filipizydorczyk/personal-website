@@ -1,10 +1,10 @@
 <template>
   <nav class="top-bar">
-    <img class="top-bar__background" :src="`/${backgroundImg}`" />
+    <img class="top-bar__background" :src="data.backgroundImg" />
     <div class="top-bar__container">
       <div class="top-bar__menu">
         <a
-          v-for="link in links"
+          v-for="link in data.links"
           :class="
             active === link.href
               ? 'top-bar__menu-item--active'
@@ -16,23 +16,23 @@
           {{ link.label }}
         </a>
       </div>
-      <img class="top-bar__profile" :src="`/${profileImg}`" />
+      <img class="top-bar__profile" :src="data.profileImg" />
       <div class="top-bar__links">
-        <h3>{{ name }}</h3>
+        <h3>{{ data.name }}</h3>
         <div class="top-bar__link-line">
-          <a v-if="github" :href="github" target="_blank">
+          <a v-if="github" :href="data.github" target="_blank">
             <IconGithub :size="20" />
           </a>
-          <a v-if="linkedin" :href="linkedin" target="_blank">
+          <a v-if="linkedin" :href="data.linkedin" target="_blank">
             <IconLinkedIn :size="20" />
           </a>
         </div>
-        <div v-if="email" class="top-bar__link-line--hover-disabled">
-          <a :href="`mailto:${email}`">
+        <div v-if="data.email" class="top-bar__link-line--hover-disabled">
+          <a :href="`mailto:${data.email}`">
             <span class="top-bar__link-email-icon">
               <IconEmail :size="20" />
             </span>
-            <span class="top-bar__email-address">{{ email }}</span>
+            <span class="top-bar__email-address">{{ data.email }}</span>
           </a>
         </div>
       </div>
@@ -159,18 +159,30 @@
 }
 </style>
 
-<script>
+<script lang="ts">
+import type { PropType } from "vue";
+
+export type TopBarData = {
+  backgroundImg: string;
+  profileImg: string;
+  name: string;
+  email: string;
+  linkedin: string;
+  github: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+};
+
 export default {
-  name: 'TopBar',
+  name: "TopBar",
   props: {
-    backgroundImg: String,
-    profileImg: String,
-    name: String,
-    email: String,
-    linkedin: String,
-    github: String,
-    links: Array,
+    data: { type: Object as PropType<TopBarData>, required: true },
     active: String,
   },
-}
+  setup(props) {
+    return { data: props.data };
+  },
+};
 </script>

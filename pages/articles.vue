@@ -1,18 +1,6 @@
 <template>
   <div class="articles-page">
-    <TopBar
-      background-img="img/code.jpg"
-      profile-img="img/profile.jpg"
-      name="Filip Izydorczyk"
-      email="filip.izydorczyk@protonmail.com"
-      linkedin="https://www.linkedin.com/in/filip-izydorczyk-39577a216/"
-      github="https://github.com/filipizydorczyk"
-      :links="[
-        { label: 'About me', href: '/' },
-        { label: 'Blog', href: '/articles' },
-      ]"
-      active="/articles"
-    />
+    <TopBar :data="topBarData" active="/articles" />
     <div class="page-container">
       <h1>My publications</h1>
       <p class="articles-page__brief">
@@ -50,6 +38,7 @@
 <script>
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import { useStore } from "~/composables/useStore";
 
 // const HOSTNAME = 'http://localhost:3000'
 const HOSTNAME = "https://cms.filipizydorczyk.pl";
@@ -57,6 +46,7 @@ const HOSTNAME = "https://cms.filipizydorczyk.pl";
 export default {
   setup() {
     const route = useRoute();
+    const { topBarData } = useStore();
 
     const articles = ref([]);
     const currentPage = ref(route.query.page || 1);
@@ -97,8 +87,7 @@ export default {
 
     onMounted(fetchArticles);
 
-    return { articles, goLast, goNext, goBack, goFirst };
+    return { articles, topBarData, goLast, goNext, goBack, goFirst };
   },
 };
-
 </script>
