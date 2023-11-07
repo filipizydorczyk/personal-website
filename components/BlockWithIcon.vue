@@ -65,7 +65,7 @@
 }
 </style>
 
-<script>
+<script lang="ts">
 export default {
   name: 'BlockWithIcon',
   props: {

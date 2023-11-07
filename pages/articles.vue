@@ -2,23 +2,17 @@
   <div class="articles-page">
     <TopBar :data="topBarData" active="/articles" />
     <div class="page-container">
-      <h1>My publications</h1>
-      <p class="articles-page__brief">
-        I absolutely love exploring new technologies and playing around with
-        them. Whether it's testing out the latest gadgets or trying my hand at
-        coding, I find joy in experimenting. This blog is where I plan to share
-        anything cool or exciting I come up with during my tech adventures.
-        While I'll be sharing my findings on various platforms, this blog will
-        serve as the central hub where everything comes together in one place.
-      </p>
-      <ArticleFeed :articles="articles" />
-      <div class="articles-page__pagination">
-        <a v-on:click="goFirst"> First </a>
-        <a v-on:click="goBack"> Previous </a>
-        <a href="#">{{ currentPage }}</a>
-        <a v-on:click="goNext"> Next </a>
-        <a v-on:click="goLast"> Last </a>
-      </div>
+      <SectionBlogIntro />
+      <section id="blog-feed">
+        <ArticleFeed :articles="articles" />
+        <div class="articles-page__pagination">
+          <a v-on:click="goFirst"> First </a>
+          <a v-on:click="goBack"> Previous </a>
+          <a href="#">{{ currentPage }}</a>
+          <a v-on:click="goNext"> Next </a>
+          <a v-on:click="goLast"> Last </a>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -35,7 +29,7 @@
 }
 </style>
 
-<script>
+<script lang="ts">
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "~/composables/useStore";
@@ -47,20 +41,21 @@ export default {
   setup() {
     const route = useRoute();
     const { topBarData } = useStore();
+    const page =
+      typeof route.query.page === "string" ? Number(route.query.page) : 1;
 
     const articles = ref([]);
-    const currentPage = ref(route.query.page || 1);
+    const currentPage = ref(page || 1);
     const total = ref(1);
 
     const fetchArticles = async () => {
-      const page = route.query.page;
       const response = await fetch(
         `${HOSTNAME}/api/v1/articles?page=${page || 1}`
       ).then((res) => res.json());
 
       currentPage.value = response.page;
       total.value = response.pages;
-      articles.value = response.content.map((art) => ({
+      articles.value = response.content.map((art: Record<string, any>) => ({
         title: art.name,
         thumbnail: art.metadata?.thumbnail,
         href: `/article?article=${art.name}`,

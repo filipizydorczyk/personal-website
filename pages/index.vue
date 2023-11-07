@@ -21,12 +21,7 @@
 </style>
 
 <script lang="ts">
-import Vue from "vue";
 import { useStore } from "~/composables/useStore";
-
-// export default Vue.extend({
-//   name: 'IndexPage',
-// })
 
 export default {
   setup() {

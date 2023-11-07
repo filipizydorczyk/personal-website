@@ -20,10 +20,10 @@
       <div class="top-bar__links">
         <h3>{{ data.name }}</h3>
         <div class="top-bar__link-line">
-          <a v-if="github" :href="data.github" target="_blank">
+          <a v-if="data.github" :href="data.github" target="_blank">
             <IconGithub :size="20" />
           </a>
-          <a v-if="linkedin" :href="data.linkedin" target="_blank">
+          <a v-if="data.linkedin" :href="data.linkedin" target="_blank">
             <IconLinkedIn :size="20" />
           </a>
         </div>
