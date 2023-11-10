@@ -1,9 +1,11 @@
 <template>
   <div :class="`article-card ${hasPadding ? `article-card--with-pading` : ``}`">
     <div class="article-card__content-wraper">
-      <a :href="href">
-        <img class="article-card__thumbnail" :src="thumbnail" />
-      </a>
+      <div class="article-card__thumbnail">
+        <a :href="href">
+          <img :src="thumbnail" />
+        </a>
+      </div>
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>
@@ -31,17 +33,28 @@
 .article-card__thumbnail {
   width: 100%;
   height: 200px;
-  object-fit: cover;
   border-radius: 6px;
+  overflow: hidden;
   -webkit-box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
   -moz-box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
   box-shadow: 0px 0px 40px -23px rgba(191, 191, 191, 1);
+}
+
+.article-card__thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.article-card:hover img {
+  scale: 1.1;
 }
 </style>
 
 <script lang="ts">
 export default {
-  name: 'ArticleCard',
+  name: "ArticleCard",
   props: {
     title: String,
     description: String,
@@ -49,5 +62,5 @@ export default {
     href: String,
     hasPadding: Boolean,
   },
-}
+};
 </script>
