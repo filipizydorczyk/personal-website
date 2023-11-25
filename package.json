@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "start": "http-server -c-1 ./dist",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate --help"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "http-server": "^14.1.1",
     "nuxt": "^3.8.2",
-    "vue": "^3.3.7",
+    "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   }
 }
