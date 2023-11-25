@@ -20,11 +20,33 @@
       <div class="top-bar__links">
         <h3>{{ data.name }}</h3>
         <div class="top-bar__link-line">
-          <a v-if="data.github" :href="data.github" target="_blank">
+          <a
+            v-if="data.socials.github"
+            :href="data.socials.github"
+            target="_blank"
+          >
             <IconGithub :size="20" />
           </a>
-          <a v-if="data.linkedin" :href="data.linkedin" target="_blank">
+          <a
+            v-if="data.socials.linkedin"
+            :href="data.socials.linkedin"
+            target="_blank"
+          >
             <IconLinkedIn :size="20" />
+          </a>
+          <a
+            v-if="data.socials.youtube"
+            :href="data.socials.youtube"
+            target="_blank"
+          >
+            <IconYouTube :size="20" />
+          </a>
+          <a
+            v-if="data.socials.instagram"
+            :href="data.socials.instagram"
+            target="_blank"
+          >
+            <IconInstagram :size="20" />
           </a>
         </div>
         <div v-if="data.email" class="top-bar__link-line--hover-disabled">
@@ -77,6 +99,12 @@
   color: white;
   margin: 0;
   margin-bottom: 0.25rem;
+}
+
+.top-bar__link-line a {
+  margin-right: 0.5rem;
+  display: inline-block;
+  height: 20px;
 }
 
 .top-bar__link-line,
@@ -167,8 +195,12 @@ export type TopBarData = {
   profileImg: string;
   name: string;
   email: string;
-  linkedin: string;
-  github: string;
+  socials: {
+    linkedin: string;
+    github: string;
+    youtube: string;
+    instagram: string;
+  };
   links: {
     label: string;
     href: string;
