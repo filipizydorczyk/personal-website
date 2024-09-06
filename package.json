@@ -1,11 +1,11 @@
 {
   "name": "personal-website",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "http-server -c-1 ./dist",
-    "generate": "nuxt generate --help"
+    "generate": "nuxt generate"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",

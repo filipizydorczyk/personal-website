@@ -60,7 +60,7 @@
           <span class="inline"><IconAzure :width="58" :height="20" /> </span>
         </Badge>
         <Badge>
-          <span class="inline">
+          <span class="inline" style="white-space: nowrap">
             <IconGitlab :size="20" />
             <label>Gitlab&nbsp;CI/CD</label>
           </span>
@@ -252,6 +252,6 @@
 
 <script lang="ts">
 export default {
-  name: 'SectionExpirience',
-}
+  name: "SectionExpirience",
+};
 </script>
